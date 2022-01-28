@@ -127,3 +127,23 @@ VALUES
   ("Reed","Mcclain",12,"16.08.05","m-reed@redschool.com"),
   ("Jana","Kent",13,"07.02.05","janakent@redschool.com"),
   ("Aimee","Yang",13,"08.03.05","a-yang9215@redschool.com");
+
+
+CREATE TABLE IF NOT EXISTS Class_Info(
+Class_ID INT NOT NULL AUTO_INCREMENT,
+CLASS_NAME VARCHAR(50) NOT NULL,
+FOREIGN KEY (staff_ID) REFERENCES staff(staff_ID),
+PRIMARY KEY (Class_ID)
+);
+
+INSERT INTO Class_Info(Class_NAME)
+VALUES
+('ART'),
+('BIOLOGY'),
+('BUSINESS STUDIES'),
+('CHEMISTRY'),
+('GEOGRAPHY'),
+('MUSIC'),
+('PHSYCOLOGY'),
+('SOCIOLOGY')
+;
